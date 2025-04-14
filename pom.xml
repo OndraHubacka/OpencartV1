@@ -10,26 +10,32 @@
 
 
 
-    <!-- build management -->
+    <!-- build Maven   https://maven.apache.org/plugins/maven-compiler-plugin/plugin-info.html  -->
     <build>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.11.0</version>
-                </plugin>
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.14.0</version>
+
+                </plugin>
+
+
+                <plugin> <!-- https://maven.apache.org/surefire/maven-surefire-plugin/usage.html -->
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.2.2</version>
+                    <version>3.5.3</version>
+
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>master.xml</suiteXmlFile>
+                            <suiteXmlFile>testngMaster.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
+
+
             </plugins>
         </pluginManagement>
     </build>
